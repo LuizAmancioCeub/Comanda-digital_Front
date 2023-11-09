@@ -64,6 +64,9 @@ table tbody tr td button:hover, table tbody tr td button:focus {
         display: flex;
         gap: 1rem;
     }
+    .pagamento{
+        width: 100%;
+    }
     table tbody tr td {
         display: block;
         text-align: right;
