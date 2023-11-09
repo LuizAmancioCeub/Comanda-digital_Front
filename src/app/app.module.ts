@@ -16,6 +16,8 @@ import { TabelaPreparoComponent } from './components/comanda-components/tabela-p
 import { MenuComponent } from './components/menus/menu/menu.component';
 import { MenuPerfilComponent } from './components/menus/menu-perfil/menu-perfil.component';
 import { ContentsComponentComanda } from './components/comanda-components/contents/contents.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 @NgModule({
   declarations: [
@@ -36,7 +38,8 @@ import { ContentsComponentComanda } from './components/comanda-components/conten
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
