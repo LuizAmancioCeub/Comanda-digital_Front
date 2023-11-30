@@ -22,6 +22,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TesteContentComponent } from './testesAPI/teste-content/teste-content.component';
 import { FormRegisterComponent } from './components/form-register/form-register.component';
 import { ModelPedidoComponent } from './components/cardapio-components/model-pedido/model-pedido.component';
+import { ModalUpdateComponent } from './components/comanda-components/modal-update/modal-update.component';
+import { ModalDeleteComponent } from './components/comanda-components/modal-delete/modal-delete.component';
 
 
 @NgModule({
@@ -42,7 +44,9 @@ import { ModelPedidoComponent } from './components/cardapio-components/model-ped
     MenuPerfilComponent,
     TesteContentComponent,
     FormRegisterComponent,
-    ModelPedidoComponent
+    ModelPedidoComponent,
+    ModalUpdateComponent,
+    ModalDeleteComponent
   ],
   imports: [
     BrowserModule,

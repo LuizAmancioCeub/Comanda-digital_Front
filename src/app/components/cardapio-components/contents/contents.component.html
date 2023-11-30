@@ -15,8 +15,8 @@
     </app-cards>
 
     <app-cards
-        item="Lasanha a Bolonhesa"
-        descricao="Com molho à bolonhesa, carne moída e presunto, coberta com molho branco e mussarela."
+        item="Lasanha"
+        descricao="Molho à bolonhesa, carne moída e presunto, coberta com molho branco e mussarela."
         imagem="lasanha.jpg"
         preco= '26.99'>
     </app-cards>
@@ -29,7 +29,7 @@
     </app-cards>
 
      <app-cards
-        item="Macarronada Vai Dentro"
+        item="Macarronada"
         descricao="Vai dentro !! 500g Macarrão, Molho de tomate, queijo parmesão ralado."
         imagem="macarrao.jpg"
         preco= '18.99'>
@@ -41,6 +41,10 @@
         imagem="costelinha.jfif"
         preco= '58.99'>
     </app-cards>
+
+    <ng-container *ngIf="msg">
+        <div class="{{show}}" id="snackbar"><i style="background-color: lightgreen;  border-radius: 1rem; font-size: 22px;" class='bi bi-check-circle'></i> {{txt}}</div>
+    </ng-container>
 
 </div>
 

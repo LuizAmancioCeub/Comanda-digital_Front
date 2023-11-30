@@ -1,5 +1,6 @@
 import { Component, Input, OnChanges, SimpleChanges, inject } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { EventsService } from 'src/app/services/events.service';
 
 @Component({
   selector: 'app-model-pedido',
@@ -15,7 +16,12 @@ export class ModelPedidoComponent implements OnChanges {
   valorTotal:number = 0;
   observacoes:string = "";
 
- 
+  onSubmitPedido(){   
+    this.close();
+    setTimeout(() => {
+      this.eventService.emitMsg(true, "Pedido Realizado com Sucesso");
+    }, 300);
+  }
 
   add(){
     if(this.quantidade < 10){
@@ -30,7 +36,7 @@ export class ModelPedidoComponent implements OnChanges {
     }
   }
 
-  constructor(){}
+  constructor(private modalService:NgbModal, private eventService:EventsService){}
   ngOnChanges(changes: SimpleChanges): void {
     this.calcularValorTotal();
   }
@@ -45,5 +51,9 @@ export class ModelPedidoComponent implements OnChanges {
       console.error('O valor não pode ser convertido para número.');
       this.valorTotal = 0;
     }
+  }
+
+  close() {
+    this.modalService.dismissAll();
   }
 }

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, TemplateRef } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-tabela-preparo',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./tabela-preparo.component.css']
 })
 export class TabelaPreparoComponent {
+  constructor( private modalService:NgbModal){}
 
+  openVerticallyCentered(content: TemplateRef<any>) {
+		this.modalService.open(content, { centered: true });
+	}
 }

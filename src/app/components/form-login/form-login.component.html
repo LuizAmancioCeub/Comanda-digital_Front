@@ -15,12 +15,12 @@
             </select>
         </div> 
             <div class="input">
-                <input class="inputField" type="text" name="login" id="login" [(ngModel)]="login" maxlength="11" required="required">
+                <input class="inputField" type="text" name="login" id="login" [(ngModel)]="login" maxlength="11" required="required" maxlength="11">
                 <label for="cpf" class="input__label">CPF</label>
             </div>
 
             <div class="input">
-                <input class="input__field" id="password" name="senha" type="password" [(ngModel)]="senha" required />
+                <input class="input__field" id="password" name="senha" type="password" maxlength="12" [(ngModel)]="senha" required />
                 <label for="password" class="input__label">Senha</label>
                 <span class="input__icon-wrapper">
                     <i (click)="eye()" class="input__icon ri-eye-off-line"></i>

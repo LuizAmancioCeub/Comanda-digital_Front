@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-form-register',
@@ -6,6 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./form-register.component.css']
 })
 export class FormRegisterComponent {
+
+  constructor(private modalService: NgbModal){}
   
   nome:string = "";
   cpf:string = "";
@@ -59,4 +62,8 @@ export class FormRegisterComponent {
       
       inputPassword.type = inputPassword.type === 'password' ? 'text' : 'password'
   }   
+
+  close() {
+    this.modalService.dismissAll();
+  }
 }

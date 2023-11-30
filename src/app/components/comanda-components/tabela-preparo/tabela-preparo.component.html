@@ -24,14 +24,30 @@
                 <td data-title="Valor">R$ 28.99</td>
                 <td data-title="Horário">21:54</td>
                 <td class="editar">
-                    <button class='btn btn-info' data-toggle='modal' data-target="#alterarPedido">Editar</button>
+                    <button (click)="openVerticallyCentered(content)" class='btn btn-info' data-toggle='modal' data-target="#alterarPedido">Editar</button>
                 </td>
                 <td>    
-                    <button class='btn btn-danger' data-toggle='modal' data-target='#cancelarPedido' style='margin-top: 10px;'>Cancelar</button>
+                    <button (click)="openVerticallyCentered(contentDelete)" class='btn btn-danger' data-toggle='modal' data-target='#cancelarPedido' style='margin-top: 10px;'>Cancelar</button>
                 </td>
             </tr>
         </tbody>
+        <ng-template #content let-modal>
+            <app-modal-update
+                idItem="1"
+                idPedido="1"
+                item="X-Tudo"
+                quantidade="1"
+                observacao="Sem Barbecue sem isso sem aquilo sem isso também"
+                valor="28.99"
+            >
+            </app-modal-update>
+        </ng-template>
 
+        <ng-template #contentDelete let-modal>
+            <app-modal-delete
+                idPedido="1"
+            ></app-modal-delete>
+        </ng-template>
     </table>
 
     <table>

@@ -53,3 +53,11 @@
     width: 80%;
     margin-bottom: 1rem;
   }
+  
+  textarea{
+    background: transparent;
+    border: none;
+    padding: .5rem;
+    background-color: transparent; /* Garante que o fundo seja transparente */
+  outline: none; /* Remove a borda de foco padrão */
+  }
