@@ -17,8 +17,6 @@ export class ModalUpdateComponent {
   @Input() observacao:string=""
   @Input() valor:number|string = ""
   valorTotal:number = 0;
-  
- qntd:number = this.quantidade = typeof this.quantidade === 'string' ? parseFloat(this.quantidade) : Number(this.quantidade);
 
   onSubmitUpdate(){
     if (typeof this.idPedido === "string") {

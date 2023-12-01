@@ -29,7 +29,7 @@ h1{
     color: #fff; /* White text color */
     text-align: center; /* Centered text */
     border-radius: .6rem; /* Rounded borders */
-    padding: 1rem; /* Padding */
+    padding: .8rem; /* Padding */
     position: fixed; /* Sit on top of the screen */
     z-index: 1; /* Add a z-index if needed */
     left: 50%; /* Center the snackbar */
