@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, TemplateRef } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-tabela-comanda',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class TabelaComandaComponent {
 
+  constructor(private modalService:NgbModal){}
+  openVerticallyCentered(content: TemplateRef<any>) {
+		this.modalService.open(content, { centered: true})//,windowClass: 'custom-modal-comanda-item'});
+	}
+
+  close() {
+    this.modalService.dismissAll();
+  }
 }

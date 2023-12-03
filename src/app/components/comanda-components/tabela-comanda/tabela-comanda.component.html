@@ -17,18 +17,48 @@
             <tr style="border-radius:20px;background-color:rgba(220, 220, 220, 0.45)">
                 <input type="hidden" name="idItens" value="'.$row2['idItens'].'">
                 <input type="hidden" name="idPedido" value="'.$row2['idPedido'].'">
-                <td data-title="Num Pedido">2</td>
-                <td data-title="Pedido">Coca-Cola 200ml</td>
-                <td data-title="Quantidade">2</td>
-                <td data-title="Obs">Com gelo e Limão</td>
-                <td data-title="Valor">R$ 7.99</td>
+                <td data-title="Num Pedido">1</td>
+                <td data-title="Pedido">Costelinha</td>
+                <td data-title="Quantidade">1</td>
+                <td data-title="Obs">Sem molho barbecue</td>
+                <td data-title="Valor">R$ 58.99</td>
                 <td data-title="Entrega">28/08/2023 - 21:45</td>
-                    <td>
-                        <button class="btn btn-info">Ver no cardápio</button>
-                    </td>
-            </tr>
-        </tbody> 
-    </table>
+                <td>
+                    <button (click)="openVerticallyCentered(item)" class="btn btn-info">Ver no cardápio</button>
+                </td>
+                <td>
+                    <button (click)="openVerticallyCentered(avaliar)" style="margin-top: -10px;" class="btn btn-success">Avaliar</button>
+                </td>
+        </tr>
+    </tbody> 
+
+    <ng-template #item let-modal>
+        <div class="modal-content"style="border-radius:5px;background-color:#f8f3e8;box-shadow: 0 0 40px rgba(0, 0, 0, 0.2), 0 0 40px rgba(0, 0, 0, 0.2);">
+            <div class="modal-header">
+                <button type="button" class="btn-close" aria-label="Close" (click)="close()"></button>
+            </div>
+            <div class="modal-body" style="display: flex; justify-content: center;">
+                <app-cards
+                    imagem="costelinha.jfif"
+                    descricao="Costelinha levada a brasa durante 34 horas, servida com molho barbecue e shoyo."
+                    item="Costelinha"
+                    itemId="4"
+                    preco="58.99"
+                    btn="Pedir Novamente"
+                >
+                </app-cards>
+            </div> 
+        </div>
+    </ng-template>
+
+    <ng-template #avaliar let-modal>
+        <app-feedback
+            imagem="costelinha.jfif"
+            item="Costelinha"
+            itemId="4"
+        ></app-feedback>
+    </ng-template>
+</table>
 
     <table>
         <thead>
@@ -53,12 +83,42 @@
                 <td data-title="Obs">Com gelo e Limão</td>
                 <td data-title="Valor">R$ 7.99</td>
                 <td data-title="Entrega">28/08/2023 - 21:45</td>
-                    <td>
-                        <button class="btn btn-info">Ver no cardápio</button>
-                    </td>
-            </tr>
-        </tbody> 
-   </table>
+                <td>
+                    <button (click)="openVerticallyCentered(item)" class="btn btn-info">Ver no cardápio</button>
+                </td>
+                <td>
+                    <button (click)="openVerticallyCentered(avaliar)" style="margin-top: -10px;" class="btn btn-success">Avaliar</button>
+                </td>
+        </tr>
+    </tbody> 
+
+    <ng-template #item let-modal>
+        <div class="modal-content"style="border-radius:5px;background-color:#f8f3e8;box-shadow: 0 0 40px rgba(0, 0, 0, 0.2), 0 0 40px rgba(0, 0, 0, 0.2);">
+            <div class="modal-header">
+                <button type="button" class="btn-close" aria-label="Close" (click)="close()"></button>
+            </div>
+            <div class="modal-body" style="display: flex; justify-content: center;">
+                <app-cards
+                    imagem="costelinha.jfif"
+                    descricao="Costelinha levada a brasa durante 34 horas, servida com molho barbecue e shoyo."
+                    item="Costelinha"
+                    itemId="4"
+                    preco="58.99"
+                    btn="Pedir Novamente"
+                >
+                </app-cards>
+            </div> 
+        </div>
+    </ng-template>
+
+    <ng-template #avaliar let-modal>
+        <app-feedback
+            imagem="costelinha.jfif"
+            item="Costelinha"
+            itemId="4"
+        ></app-feedback>
+    </ng-template>
+</table>
 
 </div>
 

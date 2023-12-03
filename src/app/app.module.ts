@@ -24,6 +24,7 @@ import { FormRegisterComponent } from './components/form-register/form-register.
 import { ModelPedidoComponent } from './components/cardapio-components/model-pedido/model-pedido.component';
 import { ModalUpdateComponent } from './components/comanda-components/modal-update/modal-update.component';
 import { ModalDeleteComponent } from './components/comanda-components/modal-delete/modal-delete.component';
+import { FeedbackComponent } from './components/feedback/feedback.component';
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import { ModalDeleteComponent } from './components/comanda-components/modal-dele
     FormRegisterComponent,
     ModelPedidoComponent,
     ModalUpdateComponent,
-    ModalDeleteComponent
+    ModalDeleteComponent,
+    FeedbackComponent
   ],
   imports: [
     BrowserModule,
