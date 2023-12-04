@@ -12,6 +12,8 @@ export class ContentsComponent implements OnInit {
   msg:boolean = false
   txt:string = "";
   show:string=""
+
+  load:boolean = true;
   
   ngOnInit(): void {
     this.eventService.msg$.subscribe(({ msg, txt }) => {
@@ -25,6 +27,10 @@ export class ContentsComponent implements OnInit {
         this.msg = false;
       }, 3000);
     });
+
+    setTimeout(() => {
+      this.load = false;
+    }, 2000);
   }
 
 }

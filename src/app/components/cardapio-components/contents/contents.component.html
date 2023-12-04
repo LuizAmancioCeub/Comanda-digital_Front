@@ -1,50 +1,56 @@
-<div class="btn_comanda">
-    <a [routerLink]="['comanda']" title="Sua Comanda" class="comanda btn btn-success" style="font-size: 30px;">
-      <i class="bi bi-receipt-cutoff"></i> 
-      <span style="font-size:15px;border-radius:10px;color:black" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning">
-          2 </span>
-    </a>
-</div>
-<div class="cards">
 
-    <app-cards
-        item="X-Tudo"
-        descricao="Hambúrguer Artesanal - 200g de Picanha, 50g Queijo, Alface, Tomate, Cebola e 10g de Bacon."
-        imagem="hamburguer.jpg"
-        preco= '28.99'>
-    </app-cards>
+    <app-loading *ngIf="load"></app-loading>
 
-    <app-cards
-        item="Lasanha"
-        descricao="Molho à bolonhesa, carne moída e presunto, coberta com molho branco e mussarela."
-        imagem="lasanha.jpg"
-        preco= '26.99'>
-    </app-cards>
+<ng-container *ngIf="!load">
+    <div class="btn_comanda">
+        <a [routerLink]="['comanda']" title="Sua Comanda" class="comanda btn btn-success" style="font-size: 30px;">
+          <i class="bi bi-receipt-cutoff"></i> 
+          <span style="font-size:15px;border-radius:10px;color:black" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning">
+              2 </span>
+        </a>
+    </div>
+    <div class="cards">
+    
+        <app-cards
+            item="X-Tudo"
+            descricao="Hambúrguer Artesanal - 200g de Picanha, 50g Queijo, Alface, Tomate, Cebola e 10g de Bacon."
+            imagem="hamburguer.jpg"
+            preco= '28.99'>
+        </app-cards>
+    
+        <app-cards
+            item="Lasanha"
+            descricao="Molho à bolonhesa, carne moída e presunto, coberta com molho branco e mussarela."
+            imagem="lasanha.jpg"
+            preco= '26.99'>
+        </app-cards>
+    
+         <app-cards
+            item="X-Vale Dois"
+            descricao="Dobro de Hambúrgueres - 500g de carne, alface, cheddar, tomate, cebola e Bacon."
+            imagem="hamburguer2.jpg"
+            preco= '48.99'>
+        </app-cards>
+    
+         <app-cards
+            item="Macarronada"
+            descricao="Vai dentro !! 500g Macarrão, Molho de tomate, queijo parmesão ralado."
+            imagem="macarrao.jpg"
+            preco= '18.99'>
+        </app-cards>
+    
+         <app-cards
+            item="Costelinha"
+            descricao="Costelinha levada a brasa durante 34 horas, servida com molho barbecue e shoyo."
+            imagem="costelinha.jfif"
+            preco= '58.99'>
+        </app-cards>
+    
+        <ng-container *ngIf="msg">
+            <div class="{{show}}" id="snackbar"><i style="color: lightgreen; font-size: 22px;margin-right: .5rem;" class='bi bi-check-circle'></i> {{txt}}</div>
+        </ng-container>
+    
+    </div>
+</ng-container>
 
-     <app-cards
-        item="X-Vale Dois"
-        descricao="Dobro de Hambúrgueres - 500g de carne, alface, cheddar, tomate, cebola e Bacon."
-        imagem="hamburguer2.jpg"
-        preco= '48.99'>
-    </app-cards>
-
-     <app-cards
-        item="Macarronada"
-        descricao="Vai dentro !! 500g Macarrão, Molho de tomate, queijo parmesão ralado."
-        imagem="macarrao.jpg"
-        preco= '18.99'>
-    </app-cards>
-
-     <app-cards
-        item="Costelinha"
-        descricao="Costelinha levada a brasa durante 34 horas, servida com molho barbecue e shoyo."
-        imagem="costelinha.jfif"
-        preco= '58.99'>
-    </app-cards>
-
-    <ng-container *ngIf="msg">
-        <div class="{{show}}" id="snackbar"><i style="color: lightgreen; font-size: 22px;margin-right: .5rem;" class='bi bi-check-circle'></i> {{txt}}</div>
-    </ng-container>
-
-</div>
 
