@@ -10,7 +10,11 @@ export class TabelaComandaComponent {
 
   constructor(private modalService:NgbModal){}
   openVerticallyCentered(content: TemplateRef<any>) {
-		this.modalService.open(content, { centered: true})//,windowClass: 'custom-modal-comanda-item'});
+		this.modalService.open(content, { centered: true,windowClass: 'custom-modal-comanda-item'});
+	}
+
+  openVerticallyCenteredTst(content: TemplateRef<any>) {
+		this.modalService.open(content, { centered: true,windowClass: 'custom-modal-comanda-item'});
 	}
 
   close() {

@@ -13,6 +13,7 @@ export class CardsComponent {
   @Input()descricao:string="";
   @Input()imagem:string="";
   @Input()preco:number|null|string= null;
+  @Input()btn:string = "Fazer Pedido";
 
 
   openVerticallyCentered(content: TemplateRef<any>) {
