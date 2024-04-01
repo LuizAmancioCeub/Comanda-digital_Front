@@ -61,3 +61,6 @@
     background-color: transparent; /* Garante que o fundo seja transparente */
   outline: none; /* Remove a borda de foco padrão */
   }
+  textarea:focus{
+    background: transparent;
+  }

@@ -10,6 +10,6 @@ export class TabelaPreparoComponent {
   constructor( private modalService:NgbModal){}
 
   openVerticallyCentered(content: TemplateRef<any>) {
-		this.modalService.open(content, { centered: true });
-	}
+    this.modalService.open(content, { centered: true,windowClass:'custom' });
+}
 }

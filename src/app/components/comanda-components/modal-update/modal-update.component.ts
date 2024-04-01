@@ -34,18 +34,21 @@ export class ModalUpdateComponent {
     }
   }
 
-add(): void {
-  this.quantidade = this.converterParaNumero(this.quantidade) + 1;
-  this.calcularValorTotal();
-}
-
-diminuir(): void {
-  this.quantidade = this.converterParaNumero(this.quantidade);
-  if (this.quantidade > 1) {
-    this.quantidade -= 1;
-    this.calcularValorTotal();
+  add(){
+    this.quantidade = this.converterParaNumero(this.quantidade);
+    if(this.quantidade < 10){
+      this.quantidade++
+      this.calcularValorTotal();
+    }
   }
-}
+  
+  diminuir(): void {
+    this.quantidade = this.converterParaNumero(this.quantidade);
+    if (this.quantidade > 1) {
+      this.quantidade -= 1;
+      this.calcularValorTotal();
+    }
+  }
 
 calcularValorTotal():void{
   this.valor = typeof this.valor === 'string' ? parseFloat(this.valor) : this.valor as number; // convertendo string para number
