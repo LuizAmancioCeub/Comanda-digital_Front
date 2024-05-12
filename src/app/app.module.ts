@@ -26,6 +26,8 @@ import { ModalUpdateComponent } from './components/comanda-components/modal-upda
 import { ModalDeleteComponent } from './components/comanda-components/modal-delete/modal-delete.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
 import { LoadingComponent } from './components/loading/loading.component';
+import { MeusDadosComponent } from './components/meus-dados/meus-dados.component';
+import { MinhaMesaComponent } from './components/minha-mesa/minha-mesa.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +51,9 @@ import { LoadingComponent } from './components/loading/loading.component';
     ModalUpdateComponent,
     ModalDeleteComponent,
     FeedbackComponent,
-    LoadingComponent
+    LoadingComponent,
+    MeusDadosComponent,
+    MinhaMesaComponent,
   ],
   imports: [
     BrowserModule,

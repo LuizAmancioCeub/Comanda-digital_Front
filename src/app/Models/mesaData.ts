@@ -5,6 +5,7 @@ export type MesaData = {
         nome:string
     }
     status:{
+        id:number
         status:string
     }
 }
