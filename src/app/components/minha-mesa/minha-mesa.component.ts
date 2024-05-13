@@ -50,7 +50,7 @@ export class MinhaMesaComponent {
         facingMode: "environment" // Use "user" para a câmera frontal
       }
     };
-    navigator.mediaDevices.getUserMedia({ video: true })
+    navigator.mediaDevices.getUserMedia(constraints)
       .then(stream => {
         this.videoElement.nativeElement.srcObject = stream;
         this.capturarQRCode();
