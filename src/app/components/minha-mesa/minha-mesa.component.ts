@@ -45,6 +45,11 @@ export class MinhaMesaComponent {
   openCamera(): void {
     this.mesaService.camera = true;
     this.cameraLigada = true;
+    const constraints: MediaStreamConstraints = {
+      video: {
+        facingMode: "environment" // Use "user" para a câmera frontal
+      }
+    };
     navigator.mediaDevices.getUserMedia({ video: true })
       .then(stream => {
         this.videoElement.nativeElement.srcObject = stream;
