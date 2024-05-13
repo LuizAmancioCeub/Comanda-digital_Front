@@ -38,11 +38,10 @@
               <div class="col col-1">Mesa</div>
               <div class="col col-2">Garçom</div>
             </li>
-            <li class="table-row">
-              <div style="background: #f8f3e8;
-              box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 0 10px rgba(0, 0, 0, 0.1);" class="col col-1" >{{novaMesaNum}}</div>
-              <div style="background: #f8f3e8;
-              box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 0 10px rgba(0, 0, 0, 0.1);" class="col col-2" >{{novaMesaGarcom}}</div>
+            <li style="background: #f8f3e8;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 0 10px rgba(0, 0, 0, 0.1);" class="table-row">
+              <div class="col col-1" >{{novaMesaNum}}</div>
+              <div class="col col-2" >{{novaMesaGarcom}}</div>
             </li>
         </ul>
         <p *ngIf="mesaService.alterarMesa" style="font-size: 14px;text-align: center;"><span style="color: red;font-size: 20px;">*</span> Todos seus pedidos e sua comanda serão associados à nova mesa.</p>
